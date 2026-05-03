@@ -24,7 +24,7 @@ if uploaded_file and run_button:
     df = pd.read_csv(uploaded_file)
     
     # --- STEP 1: Summarize ---
-    st.subheader("📋 Dataset Overview")
+    st.subheader("Dataset Overview")
     summary = summarize_dataset(df)
     col1, col2 = st.columns(2)
     col1.metric("Rows", summary["basic_info"]["num_rows"])
