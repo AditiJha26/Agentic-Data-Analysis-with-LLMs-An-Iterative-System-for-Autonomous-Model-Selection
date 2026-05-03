@@ -1,26 +1,27 @@
 {
     "results": {
         "LogisticRegression": {
-            "accuracy": 0.8044692737430168,
-            "f1_score": 0.7552447552447552
+            "accuracy": 0.8494706153137946,
+            "f1_score": 0.5841458245019076
         },
         "RandomForest": {
-            "accuracy": 0.8212290502793296,
-            "f1_score": 0.7611940298507462
+            "accuracy": 0.9304894890286942,
+            "f1_score": 0.8215833005120126
         }
     },
     "decision": {
         "decision": "STOP",
-        "reason": "The RandomForest model shows a good accuracy of 0.8212 and a decent F1 Score of 0.7612, indicating reasonable performance."
+        "reason": "RandomForest model shows high accuracy and F1 score, indicating good performance."
     },
     "plan": {
-        "target_column": "Survived",
+        "target_column": "loan_status",
         "task_type": "classification",
         "preprocessing": [
-            "Impute missing values in Age using median age based on Pclass and Sex",
-            "Create a new feature 'FamilySize' by combining SibSp and Parch",
-            "Encode categorical variables using One-Hot Encoding for Sex and Embarked",
-            "Scale numerical features like Age and Fare using StandardScaler"
+            "Handle missing values using imputation (mean for numeric, mode for categorical)",
+            "Normalize numeric features (person_age, person_income, person_emp_length, loan_amnt, loan_int_rate, loan_percent_income)",
+            "One-hot encode categorical variables (person_home_ownership, loan_intent, loan_grade, cb_person_default_on_file)",
+            "Feature engineering: create interaction terms between loan_amnt and loan_int_rate",
+            "Remove outliers in numeric features using IQR method"
         ],
         "models": [
             "LogisticRegression",

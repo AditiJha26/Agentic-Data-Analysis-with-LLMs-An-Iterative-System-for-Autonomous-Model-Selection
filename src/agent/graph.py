@@ -79,7 +79,7 @@ def run_agent(df, max_iterations=5):
 
     print("Agent finished.\n")
 
-    with open("outputs/reports/final_output.json", "w") as f:
+    with open("../outputs/reports/final_output.json", "w") as f: 
         json.dump({
             "results": results,
             "decision": decision,
