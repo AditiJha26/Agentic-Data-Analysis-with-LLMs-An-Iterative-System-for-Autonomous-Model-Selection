@@ -177,7 +177,6 @@ We bridge the gap between:
 - Support for more models and advanced pipelines
 - Full implementation of feature engineering steps
 - Hyperparameter optimization
-- Integration with UI (e.g., Streamlit) if not done yet
 - Comparison with AutoML systems
 
 ---
@@ -189,7 +188,7 @@ We bridge the gap between:
 - scikit-learn
 - OpenAI API
 - LangGraph (agent orchestration)
-
+- StreamLit
 ---
 
 
@@ -200,7 +199,7 @@ We bridge the gap between:
 - Add your OpenAI API key in .env:
     OPENAI_API_KEY=your_key_here
 - Run the project:
-    python src/main.py
+    streamlit run src/app.py
 
 
 
