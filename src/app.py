@@ -69,7 +69,7 @@ if uploaded_file and run_button:
                 break
             
             if iteration < max_iterations:
-                st.write("🔧 Refining plan for next round...")
+                st.write("Refining plan for next round...")
                 refined = refine_plan(summary, plan, eval_summary)
                 plan["preprocessing"] = refined.get("preprocessing", plan["preprocessing"])
                 st.code(f"Updated Preprocessing: {plan['preprocessing']}")
